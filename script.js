@@ -7,8 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 });
-// Dynamic Text Animation
-const dynamicText = document.getElementById('dynamic-text');
+
+
+
+
+// Animation Text for home page
+const dynamicText = document.getElementById('dynamictext');
 const phrases = [
   "CONNECT THROUGH BOOKS",
   "DISCOVER NEW WORLDS",
@@ -32,13 +36,13 @@ function typeText() {
     charIndex--;
     if (charIndex === 0) {
       typing = true;
-      phraseIndex = (phraseIndex + 1) % phrases.length; // Loop to next phrase
+      phraseIndex = (phraseIndex + 1) % phrases.length; 
     }
   }
-  setTimeout(typeText, typing ? 100 : 50); // Typing and deleting speeds
+  setTimeout(typeText, typing ? 100 : 50); 
 }
 
-// Start typing animation
+
 typeText();
 
 // Increment Book Counter
@@ -46,12 +50,12 @@ const counter = document.getElementById('counter');
 let bookCount = 1235;
 
 setInterval(() => {
-  bookCount += Math.floor(Math.random() * 5) + 1; // Increment randomly
+  bookCount += Math.floor(Math.random() * 5) + 1; 
   counter.textContent = `Books Available: ${bookCount}`;
 }, 2000);
 
 
-
+//form validation code :/
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
